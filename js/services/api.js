@@ -1,12 +1,16 @@
-// En un proyecto real, aquí usaríamos fetch('url-de-tu-api')
+// Simulamos la llamada a un servidor real (Fetch)
 export const fetchNews = async () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
-                { id: 1, title: 'El auge de la Inteligencia Artificial', content: 'La IA transforma la educación universitaria...', date: '2023-10-25' },
-                { id: 2, title: 'Descubrimiento en Marte', content: 'Científicos hallan nuevas evidencias de agua...', date: '2023-10-24' },
-                { id: 3, title: 'Avances en computación cuántica', content: 'Un nuevo procesador rompe récords de velocidad...', date: '2023-10-23' }
+                { 
+                    id: 1, 
+                    title: 'Google revoluciona la asistencia virtual con Gemini 3.1 Pro', 
+                    content: 'El ecosistema web recibe la última actualización del modelo fundacional de Google, Gemini 3.1 Pro. Diseñado específicamente para entornos web, este modelo multimodal avanzado destaca por su alta capacidad de razonamiento lógico, generación de código y su integración nativa con herramientas de creación de imágenes y video de alta fidelidad. Los desarrolladores ya están explorando sus capacidades conversacionales en tiempo real.', 
+                    date: '2026-04-23' 
+                }
+                // Si quieres añadir más, solo tienes que poner una coma y agregar otro objeto aquí
             ]);
-        }, 800); // Simulamos retraso de red
+        }, 800); // Simulamos un retraso de red de 800ms para que se vea el "Cargando..."
     });
 };

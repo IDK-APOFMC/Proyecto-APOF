@@ -15,6 +15,6 @@ El proyecto implementa el patrón Modelo-Vista-Controlador adaptado al frontend:
 - **Services**: Aíslan la lógica de llamadas a APIs externas.
 
 ## ⚙️ Instalación y Uso
-1. Clonar el repositorio: `git clone https://github.com/tu-usuario/news-project.git`
+1. Clonar el repositorio: `git clone https://github.com/IDK-APOFMC/Proyecto-APOF.git`
 2. Abrir en Visual Studio Code.
 3. Iniciar con la extensión **Live Server** (Requerido para soporte de ES Modules).

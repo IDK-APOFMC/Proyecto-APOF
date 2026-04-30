@@ -3,40 +3,32 @@ export const fetchWikiArticles = async () => {
         setTimeout(() => {
             resolve([
                 {
-                    id: 'core',
-                    title: 'Gemini 3.1 Pro (Web)',
+                    id: 'noticia-actualidad',
+                    title: '📰 NOTICIA: Gemini 3.1 Pro revoluciona la web',
                     content: `
-                        <p><strong>Gemini 3.1 Pro</strong> es el modelo fundacional subyacente que opera en el entorno web. Está diseñado para ofrecer respuestas precisas, equilibrando la empatía con la franqueza y basándose siempre en hechos y realidades.</p>
-                        <p>Actualmente opera en el <em>Free tier</em> (nivel gratuito), ofreciendo capacidades avanzadas de generación de texto y soporte para tareas complejas sin costo para el usuario estándar.</p>
+                        <p style="color: #5f6368; font-size: 0.9rem;"><em>Publicado: 30 de Abril de 2026</em></p>
+                        <p><strong>Google ha desplegado su modelo Gemini 3.1 Pro</strong>, diseñado específicamente para optimizar la interacción en entornos web. Esta actualización marca un antes y un después en cómo las inteligencias artificiales asisten a los desarrolladores.</p>
+                        <h3>Puntos clave del lanzamiento:</h3>
+                        <ul>
+                            <li><strong>Razonamiento avanzado:</strong> Capacidad mejorada para estructurar arquitecturas de software complejas (como MVC en Vanilla JS).</li>
+                            <li><strong>Acceso universal:</strong> Operando en el nivel gratuito (Free tier), permite a estudiantes y profesionales acceder a herramientas de vanguardia sin coste.</li>
+                            <li><strong>Integración multimodal:</strong> Soporte nativo para trabajar junto a modelos como Veo para generación de video de alta fidelidad.</li>
+                        </ul>
+                        <p>Los expertos señalan que esta versión equilibra perfectamente la empatía con la precisión técnica, corrigiendo errores de código al instante y guiando a los usuarios paso a paso en su aprendizaje.</p>
                     `
                 },
                 {
-                    id: 'video',
-                    title: 'Generación de Video (Modelo Veo)',
+                    id: 'core',
+                    title: 'Sobre Gemini 3.1 Pro',
                     content: `
-                        <p>Una de las capacidades generativas más destacadas es la integración con <strong>Veo</strong>, el modelo de vanguardia de Google para la generación de videos de alta fidelidad.</p>
-                        <h3>Capacidades Principales de Veo:</h3>
-                        <ul>
-                            <li><strong>Audio Nativo:</strong> Generación de videos que incluyen audio generado nativamente junto con la imagen.</li>
-                            <li><strong>Text-to-Video:</strong> Creación de escenas a partir de descripciones de texto utilizando indicaciones de audio (audio cues).</li>
-                            <li><strong>Edición Avanzada:</strong> Permite extender videos existentes y generar secuencias fluidas entre un fotograma inicial y uno final especificados.</li>
-                            <li><strong>Guía por Imagen:</strong> Uso de imágenes de referencia para guiar el estilo y contenido del video resultante.</li>
-                        </ul>
+                        <p><strong>Gemini 3.1 Pro</strong> es el modelo fundacional subyacente que opera en el entorno web. Está diseñado para ofrecer respuestas precisas, equilibrando la empatía con la franqueza y basándose siempre en hechos y realidades.</p>
                     `
                 },
                 {
                     id: 'live',
                     title: 'Gemini Live (Modo Conversacional)',
                     content: `
-                        <p><strong>Gemini Live</strong> es el modo conversacional avanzado disponible para dispositivos móviles (Android e iOS). Permite una interacción de voz natural y en tiempo real.</p>
-                        <h3>Características Clave:</h3>
-                        <ul>
-                            <li><strong>Interrupción fluida:</strong> El usuario puede interrumpir a la IA y mantener un diálogo libre sin esperar a que termine su respuesta.</li>
-                            <li><strong>Cámara Compartida (Mobile):</strong> Permite compartir el flujo de la cámara del teléfono para hacer preguntas sobre el entorno físico en tiempo real.</li>
-                            <li><strong>Pantalla Compartida (Mobile):</strong> Facilita la asistencia contextual sobre aplicaciones o contenido que se muestra en la pantalla del dispositivo.</li>
-                            <li><strong>Análisis Multimodal:</strong> Capacidad para discutir imágenes, archivos subidos y videos de YouTube directamente en la conversación.</li>
-                        </ul>
-                        <p>Sus casos de uso ideales incluyen lluvia de ideas, aprendizaje de idiomas, traducción en tiempo real y asistencia guiada en pantalla.</p>
+                        <p><strong>Gemini Live</strong> es el modo conversacional avanzado disponible para dispositivos móviles (Android e iOS). Permite una interacción de voz natural y en tiempo real con la capacidad de interrumpir y compartir pantalla o cámara.</p>
                     `
                 }
             ]);

@@ -1,44 +1,59 @@
 import { CONFIG } from '../config/constants.js';
 
-export class NewsView {
+// ✅ Corregido: Sin paréntesis y con los selectores correctos
+export class WikiView {
     constructor() {
-        this.container = document.querySelector(CONFIG.SELECTORS.NEWS_CONTAINER);
-        this.btnLoad = document.querySelector(CONFIG.SELECTORS.BTN_LOAD);
+        this.menuContainer = document.querySelector(CONFIG.SELECTORS.MENU_CONTAINER);
+        this.contentContainer = document.querySelector(CONFIG.SELECTORS.CONTENT_CONTAINER);
     }
 
-    // Vincula el evento de la vista con la función del controlador
-    bindLoadNews(handler) {
-        this.btnLoad.addEventListener('click', () => {
-            this.renderLoading();
-            handler();
-        });
-    }
-
-    renderLoading() {
-        this.container.innerHTML = '<p class="loading-msg">Cargando actualidad...</p>';
-    }
-
-    renderNews(newsArray) {
-        this.container.innerHTML = ''; // Limpiamos contenedor
+    // Dibuja el menú lateral
+    renderMenu(menuItems, onMenuItemClick) {
+        if (!this.menuContainer) return;
         
-        if (newsArray.length === 0) {
-            this.container.innerHTML = `<p>${CONFIG.MESSAGES.NO_NEWS}</p>`;
-            return;
-        }
+        this.menuContainer.innerHTML = '';
+        const ul = document.createElement('ul');
 
-        newsArray.forEach(newsItem => {
-            const article = document.createElement('article');
-            article.className = 'news-card';
-            article.innerHTML = `
-                <h2>${newsItem.title}</h2>
-                <p class="date">${new Date(newsItem.date).toLocaleDateString()}</p>
-                <p>${newsItem.content}</p>
-            `;
-            this.container.appendChild(article);
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const button = document.createElement('button');
+            
+            button.textContent = item.title;
+            button.className = 'menu-link';
+            
+            // ✅ Esta es la conexión: al hacer click, avisamos al controlador
+            button.onclick = () => onMenuItemClick(item.id);
+            
+            li.appendChild(button);
+            ul.appendChild(li);
         });
+
+        this.menuContainer.appendChild(ul);
     }
 
-    renderError() {
-        this.container.innerHTML = `<p class="error-msg">${CONFIG.MESSAGES.ERROR_LOAD}</p>`;
+    // Dibuja el artículo central
+    renderArticle(article) {
+        if (!this.contentContainer || !article) return;
+        
+        // Pequeña transición de opacidad para que parezca profesional
+        this.contentContainer.style.opacity = '0';
+        
+        setTimeout(() => {
+            this.contentContainer.innerHTML = `
+                <article>
+                    <h2>${article.title}</h2>
+                    <div class="wiki-text">
+                        ${article.content}
+                    </div>
+                </article>
+            `;
+            this.contentContainer.style.opacity = '1';
+        }, 100);
+    }
+
+    renderError(msg) {
+        if (this.contentContainer) {
+            this.contentContainer.innerHTML = `<p class="error">${msg}</p>`;
+        }
     }
 }

@@ -1,10 +1,10 @@
-import { NewsModel } from './models/NewsModel.js';
-import { NewsView } from './views/NewsView.js';
-import { NewsController } from './controllers/NewsController.js';
+import { WikiModel } from './models/WikiModel.js';
+import { WikiView } from './views/WikiView.js';
+import { WikiController } from './controllers/WikiController.js';
 
-// Inicialización de la arquitectura cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
-    const model = new NewsModel();
-    const view = new NewsView();
-    const app = new NewsController(model, view);
+    const model = new WikiModel();
+    const view = new WikiView();
+    // Al instanciar el controlador, arranca toda la aplicación
+    const app = new WikiController(model, view); 
 });

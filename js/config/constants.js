@@ -1,10 +1,10 @@
 export const CONFIG = {
     SELECTORS: {
-        NEWS_CONTAINER: '#news-container',
-        BTN_LOAD: '#btn-load-news'
+        MENU_CONTAINER: '#wiki-menu',
+        CONTENT_CONTAINER: '#wiki-content'
     },
     MESSAGES: {
-        ERROR_LOAD: 'Hubo un error al cargar las noticias.',
-        NO_NEWS: 'No hay noticias disponibles en este momento.'
+        LOADING: 'Cargando datos...',
+        ERROR: 'Error al cargar la información de la base de datos.'
     }
 };

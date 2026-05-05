@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #1a73e8; /* Azul Google */
+    --bg-color: #f8f9fa;
+    --sidebar-bg: #ffffff;
+    --text-color: #202124;
+    --border-color: #dadce0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.wiki-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.wiki-header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.wiki-header p {
+    margin: 0.5rem 0 0;
+    color: #5f6368;
+    font-size: 0.9rem;
+}
+
+.wiki-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
+}
+
+.wiki-sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+.wiki-sidebar h3 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.wiki-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wiki-sidebar nav button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    text-align: left;
+    width: 100%;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.wiki-sidebar nav button:hover {
+    text-decoration: underline;
+}
+
+.wiki-article {
+    flex: 1;
+    padding: 2rem 3rem;
+    background-color: white;
+}
+
+.wiki-article h2 {
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
